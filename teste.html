@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>teste</title>
+    </head>
+    <body>
+        <div id="tooltip_id"></div>
+    </body>
+    
+    <script>
+        var local = document.getElementById("tooltip_id");
+        var m_talent = [];
+        var talent = "10001"
+        m_talent.icon = "_img/B_1552.png";
+        m_talent.name = "Vanquish";
+        m_talent.style = "berserker";
+        m_talent.desc = "jump and strike the ground, dealing demage equal to 480% of Physical Attack and knocking down the effected enemies"
+
+        var tooltip = `<div id="${talent}_tooltip" class="tooltip">
+                            <div class="tool_img">
+                                    <img src="${m_talent.icon}">
+                            </div>
+                            <div class="tool_header" >
+                                <p class="tool_name">${m_talent.name}</p>
+                                <p class="tool_style">${m_talent.style} Style  <a class="right">Mile / Active</a></p>
+                                <p class="tool_attribs">${m_talent.attribs}</p>
+                            </div>
+                        <div class="tool_desc row">
+                            <p>${m_talent.desc}</p>
+                        </div>
+                        <div class="row">
+                            <p>Stamine Cost <i class="green">${m_talent.stamine}</i></p>
+                            <p>Cooldown <i class="green">${m_talent.stamine}</i></p>
+                            <p>Effects <i class="green">${m_talent.stamine}</i></p>
+                        </div>
+                        <div class="row">
+                            <p>Additional Stats</p>
+                            <p class="indent">Max Health <i class="green">${m_talent.stamine}</i></p>
+                            <p class="indent">Max Stamina <i class="green">${m_talent.stamine}</i></p>
+                        </div>
+                        <div class="row">
+                            <p>Requirements</p>
+                            <p class="indent">Style Mastery: <i class="green">${m_talent.stamine}</i></p>
+                            <p class="indent">Skill Points Used: <i class="green">${m_talent.stamine}</i></p>
+                        </div>
+                    </div>`;
+
+
+        local.innerHTML = tooltip;
+        
+        async function init()
+        {
+            var xml = await loadxml();
+            var xml2 = await xml;
+            segundaFuncao();
+        }
+
+        function segundaFuncao()
+        {
+            console.log("segunda funcao");
+        }
+        function loadxml()
+        {
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status ==  200)
+                    {
+                        console.log(this.responseXML);
+                    }
+            }
+            request.open("GET", "_data/talent.xml", false);
+            request.send();
+            console.log("saind");
+        }
+
+        function fetchLoadXML()
+        {
+            return fetch("_data/talent.xml");
+        }
+
+        async function getXML()
+        {
+            //const data = await fetchLoadXML();
+            var a = (await fetch("_data/talent.xml")).text();
+            if (window.DOMParser) {
+                    parseXml = function(a) {
+                    return ( new window.DOMParser() ).parseFromString(a, "text/xml");
+            };  
+}
+            return parseXml;
+        }
+    </script>
+
+<style>
+    
+    .tooltip{
+        width: 300px;
+        border: thin solid black;
+        box-shadow: 1px 1px 10px;
+        border-radius: 5px;
+        background-color: rgba(24, 23, 23, 0);
+        display:flex;
+        flex-flow: row wrap;
+        padding: 5px;
+    }
+    .right{
+        float: right;
+    }
+    .row{
+        width: 96%;
+        padding: 0px 5px;
+    }
+    .indent{
+        text-indent: 20px;
+    }
+    .row:before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.295);
+        margin: 5px;
+    }
+    .tooltip *{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 550;
+        color: rgb(199, 199, 201);
+    }
+    .tooltip p{
+        padding: 0;
+        margin: 0;
+    }
+    .green{
+        color: rgb(37, 235, 37);
+        font-style: normal;
+    }
+    .tooltip img{
+        padding: 5px;
+        width: 40px;
+        border-radius: 10px;
+        border: thin red solid;
+    }
+    
+    .tool_header{
+        border: thin red solid;
+        width: 240px;
+    }
+    .tool_name{
+        color: rgb(126, 126, 22);
+        font-size: 16pt;
+        display: flex;
+    }
+    .tool_desc{
+        /*border: thin red solid;*/
+    }
+    .tool_attribs{
+        color: rgb(126, 126, 22);
+    }
+</style>
+
+</html>

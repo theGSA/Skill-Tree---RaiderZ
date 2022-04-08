@@ -1,0 +1,40 @@
+.tabs ul{
+    display: inline-block;
+    list-style: none ;
+}
+.tabs li {
+    /*background: url("../_img/def_tabbtn.png") no-repeat 10px 0px;*/
+    width: 150px;
+    height: auto;
+    margin-right: 10x;
+    top: 20px;
+    z-index: 1;
+    display: inline-block;
+    box-sizing: border-box !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color: "black";
+    font-weight: bold;
+    /*border: thin solid black;*/
+}
+
+.tabs div.container-imagem-tab:hover{
+    color: rgb(194, 194, 71);
+    position: relative;
+    z-index: 999;
+}
+
+
+.tabs input{
+    display: none;
+}
+.tabs input:checked + label a{
+    color: rgb(255, 255, 59);
+}
+
+.tabs .selected{
+    background-color: rgb(37, 37, 37);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: -10px;
+    
+  }
