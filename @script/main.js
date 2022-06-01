@@ -1,7 +1,7 @@
 //import * as MTalent from "./talentManangement.js";
 
-const TALENT_PATH = "_data/talent.xml";
-const NAME_TALENT_PATH = "_data/name_talent.xml";
+const TALENT_PATH = "@data/talent.xml";
+const NAME_TALENT_PATH = "@data/name_talent.xml";
 var AVAILABLE_POINTS = 40;
 
 var styles = ["defender", "berserker", "sorcerer", "cleric", "assassin"];
@@ -262,7 +262,7 @@ function changeTab(target){
 
 function changeIconPath(changeIconPath)
 {
-    changeIconPath = changeIconPath.replace("Data/Interface/icon/", "_img/");
+    changeIconPath = changeIconPath.replace("Data/Interface/icon/", "@img/");
     return changeIconPath;
 }
 
@@ -319,7 +319,7 @@ function loadStyles(){
     iconImg.setAttribute("class", "skill-icon");
     iconImg.setAttribute("id", "skill-icon-id");
     //atributos imagem botao de adicao
-    nimg.setAttribute('src','_img/def_addbuttonLarge.png');
+    nimg.setAttribute('src','@img/def_addbuttonLarge.png');
     nimg.setAttribute('class','add-button');
 
     //atributos linha

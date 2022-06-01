@@ -1,23 +1,23 @@
 <html>
     <head>
         <title>talent</title>
-        <link rel="stylesheet" href="_css/classes.css" type="text/css" >
-        <link rel="stylesheet" href="_css/tooltip.css" type="text/css" >
-        <link rel="stylesheet" href="_css/tab.css"  type="text/css">
+        <link rel="stylesheet" href="@css/classes.css" type="text/css" >
+        <link rel="stylesheet" href="@css/tooltip.css" type="text/css" >
+        <link rel="stylesheet" href="@css/tab.css"  type="text/css">
 
-        <link rel="shortcut icon" href="_img/favicon.ico" >
-        <script src="_script/main.js" ></script>
-        <script src="_script/variaveis.js" ></script>
-        <script src="_script/tooltip.js" ></script>
-        <script src="_script/xmlManangement.js" ></script>
-        <script src="_script/talentManangement.js"></script>
-        <script src="_script/common.js"></script>
+        <link rel="shortcut icon" href="@img/favicon.ico" >
+        <script src="@script/main.js" ></script>
+        <script src="@script/variaveis.js" ></script>
+        <script src="@script/tooltip.js" ></script>
+        <script src="@script/xmlManangement.js" ></script>
+        <script src="@script/talentManangement.js"></script>
+        <script src="@script/common.js"></script>
 
     </head>
     <body>
         <div id="frame"> 
             <div name="Layout">
-                <img src="_img/icon_talent.png" >
+                <img src="@img/icon_talent.png" >
             </div>
             <div id="barra-skill">
                 <h1>Raiderz Talent Calculator</h1>
@@ -28,7 +28,7 @@
                     <ul id="list-tabs">
                         <li id="defender-tab" class="" target="defender" >
                             <div name="cont" class="container-imagem-tab">
-                                <img class="icon-imagem-tab" src="_img/icon_defender.png"><img>
+                                <img class="icon-imagem-tab" src="@img/icon_defender.png"><img>
                                 <input type="radio" name="style" id="defender_radio" checked="checked" >
                                     <label  for="defender_radio">
                                         <a target="defender">defender</a>
@@ -37,7 +37,7 @@
                         </li>
                         <li id="berserker-tab" class="" target="berserker">
                             <div name="cont" class="container-imagem-tab">
-                                <img class="icon-imagem-tab" src="_img/icon_berserker.png"><img>
+                                <img class="icon-imagem-tab" src="@img/icon_berserker.png"><img>
                                 <input type="radio" name="style" id="berserker_radio">
                                 <label  for="berserker_radio">
                                     <a target="berserker">Berserker</a>
@@ -46,7 +46,7 @@
                         </li>
                         <li id="cleric-tab" class="none-select" target="cleric" >
                             <div name="cont" class="container-imagem-tab">
-                                <img class="icon-imagem-tab" src="_img/icon_cleric.png"><img>
+                                <img class="icon-imagem-tab" src="@img/icon_cleric.png"><img>
                                 <input type="radio" name="style" id="cleric_radio">
                                 <label  for="cleric_radio">
                                     <a target="cleric">Cleric</a>
@@ -55,7 +55,7 @@
                         </li>
                         <li id="sorcerer-tab" class="none-select" target="sorcerer" >
                             <div name="cont" class="container-imagem-tab">
-                                <img class="icon-imagem-tab" src="_img/icon_sorcerer.png"><img>
+                                <img class="icon-imagem-tab" src="@img/icon_sorcerer.png"><img>
                                 <input type="radio" name="style" id="sorcerer_radio">
                                 <label  for="sorcerer_radio">
                                     <a target="sorcerer">Sorcerer</a>
@@ -64,7 +64,7 @@
                         </li>
                         <li id="assassin-tab" class="none-select" target="assassin" >
                             <div name="cont" class="container-imagem-tab">
-                                <img class="icon-imagem-tab" src="_img/icon_assassin.png"><img> 
+                                <img class="icon-imagem-tab" src="@img/icon_assassin.png"><img> 
                                 <input type="radio" name="style" id="assassin_radio">
                                 <label  for="assassin_radio">
                                     <a target="assassin">Assassin</a>
@@ -83,7 +83,7 @@
                             <div class="container-skill-desc">
                                 <header class="header-desc">
                                     <div class="img-container">
-                                        <img src="_img/icon_sorcerer.png" alt="img-skill">
+                                        <img src="@img/icon_sorcerer.png" alt="img-skill">
                                     </div>
                                     <p class="style-name">Sorcerer <sup>Style</sup></p>
                                 </header>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="header-desc">
                                     <div class="img-container med">
-                                       <img src="_img/T_52750.PNG" alt="uma-skill">   
+                                       <img src="@img/T_52750.PNG" alt="uma-skill">   
                                     </div>
                                     <P class="style-name" >Awakening <sup>focus</sup></P>
                                 </div>
@@ -108,7 +108,7 @@
                             <div class="container-skill-desc">
                                 <header class="header-desc">
                                     <div class="img-container">
-                                        <img src="_img/icon_defender.png" alt="img-skill">
+                                        <img src="@img/icon_defender.png" alt="img-skill">
                                     </div>
                                     <p class="style-name">Defender <sup>Style</sup></p>
                                 </header>
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="header-desc">
                                     <div class="img-container med">
-                                       <img src="_img/B_1552.png" alt="uma-skill">   
+                                       <img src="@img/B_1552.png" alt="uma-skill">   
                                     </div>
                                     <P class="style-name" >Counterattack <sup>focus</sup></P>
                                 </div>
@@ -133,7 +133,7 @@
                             <div class="container-skill-desc">
                                 <header class="header-desc">
                                     <div class="img-container">
-                                        <img src="_img/icon_berserker.png" alt="img-skill">
+                                        <img src="@img/icon_berserker.png" alt="img-skill">
                                     </div>
                                     <p class="style-name">Berserker <sup>Style</sup></p>
                                 </header>
@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="header-desc">
                                     <div class="img-container med">
-                                       <img src="_img/B_1551.png" alt="uma-skill">   
+                                       <img src="@img/B_1551.png" alt="uma-skill">   
                                     </div>
                                     <P class="style-name" >Outrage <sup>focus</sup></P>
                                 </div>
@@ -157,7 +157,7 @@
                             <div class="container-skill-desc">
                                 <header class="header-desc">
                                     <div class="img-container">
-                                        <img src="_img/icon_cleric.png" alt="img-skill">
+                                        <img src="@img/icon_cleric.png" alt="img-skill">
                                     </div>
                                     <p class="style-name">Defender <sup>Style</sup></p>
                                 </header>
@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="header-desc">
                                     <div class="img-container med">
-                                       <img src="_img/T_60501.png" alt="uma-skill">   
+                                       <img src="@img/T_60501.png" alt="uma-skill">   
                                     </div>
                                     <P class="style-name" >Possession <sup>focus</sup></P>
                                 </div>
@@ -182,7 +182,7 @@
                             <div class="container-skill-desc">
                                 <header class="header-desc">
                                     <div class="img-container">
-                                        <img src="_img/icon_assassin.png" alt="img-skill">
+                                        <img src="@img/icon_assassin.png" alt="img-skill">
                                     </div>
                                     <p class="style-name">Assassin <sup>Style</sup></p>
                                 </header>
@@ -192,7 +192,7 @@
                                 </div>
                                 <div class="header-desc">
                                     <div class="img-container med">
-                                       <img src="_img/B_1552.png" alt="uma-skill">   
+                                       <img src="@img/B_1552.png" alt="uma-skill">   
                                     </div>
                                     <P class="style-name" >Pursuit <sup>focus</sup></P>
                                 </div>
